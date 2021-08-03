@@ -1,14 +1,122 @@
 # 점프 투 플라스크
 
+## 가상 환경 설정
+
+```
+$ python -m venv myproject
+$ ls
+myproject/  README.md
+```
+
+### 가상 환경 진입하기
+
+```
+$ cd myproject/Scripts
+$ source ./activate
+(myproject)
+```
+
+### 가상 환경 벗어나기
+
+```
+$ deactivate
+```
+
+## Install
+
+### Python
+
+```
+$ python --version
+Python 3.9.2
+```
+
+### Packages
+
+```
+$ pwd
+/d/work/sp/python/flask-test/myproject/Scripts
+(myproject)
+
+$ pip install Flask
+WARNING: You are using pip version 20.2.3; however, version 21.2.2 is available.
+You should consider upgrading via the 'd:\work\sp\python\flask-test\myproject\scripts\python.exe -m pip install --upgrade pip' command.
+
+$ python -m pip install --upgrade pip
+```
+
+## 플라스크 프로젝트 생성하기
+
+### 프로젝트 디렉토리 생성 및 이동하기
+
+```
+$ mkdir projects
+$ cd projects
+$ mkdir project1
+$ cd project1
+$ cd /d/work/sp/python/flask-test/projects/project1
+```
+
+### 프로젝트 디렉토리에서 가상 환경 진입하기
+
+```
+$ source /d/work/sp/python/flask-test/myproject/Scripts/activate
+```
+
+### 프로젝트 디렉토리에서 가상 환경 벗어나기
+
+```
+$ cd /d/work/sp/python/flask-test/myproject/Scripts
+$ deactivate
+```
+
+## Run
+
+```
+$ flask run
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+Usage: flask run [OPTIONS]
+Try 'flask run --help' for help.
+
+Error: Could not locate a Flask application. You did not provide the "FLASK_APP" environment variable, and a "wsgi.py" or "app.py" module was not found in the current directory.
+(myproject)
+
+$ export FLASK_APP=pybo
+(myproject)
+
+$ flask run
+ * Serving Flask app 'pybo' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+$ export FLASK_ENV=development
+(myproject)
+
+$ flask run
+ * Serving Flask app 'pybo' (lazy loading)
+ * Environment: development
+ * Debug mode: on
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 106-950-093
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
 ## To do
 
-- [ ] 플라스크 개발 준비
-  - [ ] 플라스크 시작하기
-  - [ ] 파이썬 설치하기
-  - [ ] 플라스크 개발 환경 준비하기
-  - [ ] 플라스크 프로젝트 생성하기
-  - [ ] 파이썬 설치하고 사용해 보기
-  - [ ] 안녕하세요, 파이보!
+- [x] 플라스크 개발 준비
+  - [x] 플라스크 시작하기
+  - [x] 파이썬 설치하기
+  - [x] 플라스크 개발 환경 준비하기
+  - [x] 플라스크 프로젝트 생성하기
+  - [x] 파이썬 설치하고 사용해 보기
+  - [x] 안녕하세요, 파이보!
 - [ ] 플라스크 기초 공사
   - [ ] 플라스크 기초 다지기
   - [ ] 플라스크 애플리케이션 팩토리
