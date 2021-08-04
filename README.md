@@ -45,6 +45,7 @@ You should consider upgrading via the 'd:\work\sp\python\flask-test\myproject\sc
 $ python -m pip install --upgrade pip
 
 $ pip install Flask-Migrate
+$ pip install pymysql
 ```
 
 ## 플라스크 프로젝트 생성하기
